@@ -16,7 +16,7 @@ connection.query('SELECT * FROM products', function (error, results, fields) {
   for(i = 0; i < results.length; i ++) {
     console.log('id: ' + results[i].item_id + '\nproduct: ' + results[i].product_name + '\ndepartment: ' + results[i].department_name + '\nin stock: ' + results[i].stock_quantity + '\n---------------------\n');
   }
-  console.log('Welcome to Bamazon - A digital storefront that can only be accessed through the CLI (for some reason)!\n');
+  console.log('Welcome to Bamazon - A digital storefront that for some reason can only be accessed via your CLI!\n');
   initializeStore();
 });
 
@@ -46,14 +46,14 @@ inquirer.prompt([
         console.log(results);
         if(results[0].stock_quantity < chosenQty) {
           console.log('We are sorry - there are only ' + results[0].stock_quantity + ' of your chosen item available');
+          connection.end();
         } else {
           console.log('You purchased ' + chosenQty + ' ' + results[0].product_name + 's');
           console.log('The total cost of your purchase is $' + productCost + ' USD!');
           let newQty = results[0].stock_quantity - chosenQty;
           let sqlUpd = 'UPDATE products SET stock_quantity = ' + newQty + ' WHERE item_id = ' + connection.escape(chosenProductID);
-          connection.query(sqlUpd, function(error, results, fields) {
+          connection.query(sqlUpd, function(error, results, fields) { //this line updates the product quantity
             if(error) throw error;
-            console.log('There are now ' + newQty + ' ' + results[0].product_name + 's left in stock!');
           })
           inquirer.prompt([
             {
