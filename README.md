@@ -10,7 +10,9 @@ Inquirer for input prompts from the user and the MySQL npm package to interface 
 
 ###Functionality
 
-Upon loading, my Bamazon marketplace provides you with a pre-populated sql generated list of a stores inventory. The inventory is classified by: 
+Upon loading, my Bamazon marketplace provides you with a pre-populated sql generated list of a stores inventory. The inventory is classified by:
+
+- Product ID
 - Department 
 - Product Name 
 - Pricing
