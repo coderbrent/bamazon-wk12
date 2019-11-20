@@ -1,7 +1,7 @@
 # Bamazon - a (very) basic CLI based marketplace!
 
 
-###Functionality
+##Functionality
 
 Upon loading, my Bamazon marketplace provides you with a pre-populated sql generated list of a stores inventory. The inventory is classified by:
 
@@ -15,7 +15,7 @@ By using the unique product id, the user can select an item to purchase. Once th
 
 --- 
 
-###Issues/Bugs:
+##Issues/Bugs:
 
 * The first (and only) issue I came across was the SQL query for selecting a specific item based on it's ID. What appeared to be totally correct SQL code was yielding syntax errors. Ultimately, reading the mySQL npm documentation, I was able to discover that the reason I could not easily pass user input (via inquirer) through to my connection.query function argument was due to a security measure built into the module. Therefore, I needed to use a `connection.escape()` function on the input first before passing it to manipulate the DB.
 
