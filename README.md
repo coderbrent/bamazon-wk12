@@ -17,11 +17,4 @@ By using the unique product id, the user can select an item to purchase. Once th
 
 ##Issues/Bugs:
 
-* The first (and only) issue I came across was the SQL query for selecting a specific item based on it's ID. What appeared to be totally correct SQL code was yielding syntax errors. Ultimately, reading the mySQL npm documentation, I was able to discover that the reason I could not easily pass user input (via inquirer) through to my connection.query function argument was due to a security measure built into the module. Therefore, I needed to use a `connection.escape()` function on the input first before passing it to manipulate the DB.
-
-The reason this took so much time to solve was because I googled the issue before FIRST thoroughly reading the docs. In the future, I will always spend more time referring to documentation vs combing through stackoverflow.
-
-Time spent solving: approximately 6 hours
-Answer resource: npm mySQL documentation
-
-Interestingly enough that was the only real time consuming issue I came across during development of the storefront aspect of the project.
+* The SQL query for selecting a specific item based on it's ID. Forgot I needed to sanitize user input with a `connection.escape()` before passing it.
