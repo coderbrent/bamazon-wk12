@@ -1,12 +1,5 @@
 # Bamazon - a (very) basic CLI based marketplace!
-wk 12 hw assignment - bamazon
-Approximate Time To Develop (thus far): 9.5 hours
 
-
-##Overview 
-
-I followed the assignment's instructions which were to create an Amazon-like storefront in the CLI using
-Inquirer for input prompts from the user and the MySQL npm package to interface with Node for the stores inventory management.
 
 ###Functionality
 
