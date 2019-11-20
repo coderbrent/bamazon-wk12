@@ -11,7 +11,7 @@ Upon loading, my Bamazon marketplace provides you with a pre-populated sql gener
 - Pricing
 - Stock Count
 
-By using the unique product id, the user can select an item to purchase. Once the item has been selected, they are prompted to choose a quantity. Once a quantity has been selected, the software decreases the stock count (by the user selected quantity), multiplies the quantity by the products price (to determine a grand total) and presents this information via a console.log to the user. If the user requests more items than what is in inventory it will prompt the user that there is not enough stock and the connection closes out.
+By using the unique product id, the user can select an item to purchase. Once the item has been selected, they are prompted to choose a quantity. Once a quantity has been selected, the stock count decreases (by the user selected quantity), multiplies the quantity by the products price (to determine a grand total) and presents this information via a simple console.log to the user. If the user requests more items than what is in inventory it will prompt the user that there is not enough stock and the connection closes.
 
 --- 
 
